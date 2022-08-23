@@ -67,7 +67,8 @@ void callback(const std_msgs::UInt16MultiArray::ConstPtr &response)
     switch (static_cast<RESP>(response->data[0])) {
     case RESP::OK:
         ROS_INFO("[Echoed from Mainboard] Packet number: %u", response->data[1]);
-        echoed = true;
+        if (count == response->data[1])
+            echoed = true;
         break;
     case RESP::COMPLETE:
         ROS_INFO("[From Mainboard] data transmission has been completed");
