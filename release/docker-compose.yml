@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  lexxhard_mainboard_updator:
+    image: lexxhard_mainboard_updator:latest
+    container_name: lexxhard-mainboard-updator
+    build: 
+      context: ../
+      dockerfile: ./Dockerfile
+    volumes: ['./firmware:/LexxHard-MainBoard-Updator/firmware', '/lib/modules:/lib/modules', '/dev:/dev', '/etc/timezone:/etc/timezone:ro', '/etc/localtime:/etc/localtime:ro']
+    expose: ['11311']
+    network_mode: host
