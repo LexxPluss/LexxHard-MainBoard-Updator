@@ -1,5 +1,5 @@
 # Main board firmware updator
-
+If you build the image in the local environment, there is no need to do `docker save` and `docker load`.
 ## docker image Build
 ```shell
 $ docker compose -f release/docker-compose.yml build lexxhard_mainboard_updator
