@@ -24,3 +24,5 @@ $ catkin_make
 $ source devel/setup.bash
 $ rosrun mainboard_updator mainboard_updator <confirmed_firmware.bin> [reboot]
 ```
+## Update with legacy ROS system
+Please use [legacy](https://github.com/LexxPluss/LexxHard-MainBoard-Updator/tree/legacy) branch to update firmware with legacy ROS system.
