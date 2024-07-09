@@ -166,9 +166,9 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "mainboard_updator");
     ros::NodeHandle nh;
-    ros::Publisher pub_temp{nh.advertise<std_msgs::UInt8MultiArray>("/lexxhard/dfu_data", 10)};
+    ros::Publisher pub_temp{nh.advertise<std_msgs::UInt8MultiArray>("/global/lexxhard/dfu_data", 10)};
     pub = &pub_temp;
-    ros::Subscriber sub{nh.subscribe("/lexxhard/dfu_response", 10, callback)};
+    ros::Subscriber sub{nh.subscribe("/global/lexxhard/dfu_response", 10, callback)};
     sleep(1);
     ros::Rate loop_rate{100};
     packet.data.resize(260);
